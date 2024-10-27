@@ -27,7 +27,7 @@ let GetPuzzle = document.getElementById('GetPuzzle')
 let SolvePuzzle = document.getElementById('SolvePuzzle')
 
 GetPuzzle.onclick = function () {
-    fetch('https://sugoku.onrender.com/board?difficulty=easy')
+    fetch('https://cors-anywhere.herokuapp.com/https://sugoku.onrender.com/board?difficulty=easy')
         .then(response => response.json())
         .then(data => {
             console.log(data);
