@@ -1,0 +1,120 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: rgb(255, 255, 204); /* Lightened background color */
+} 
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#name {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: black; /* Set text color to black */
+}
+
+.Heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black; /* Set text color to black */
+}
+
+.sudoku_grid {
+    display: flex;
+    flex-direction: row;
+    max-width: 578px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+.sudoku_grid div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    color: black; /* Set text color to black */
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+    margin-bottom: 40px;
+}
+
+#GetPuzzle, #SolvePuzzle {
+    display: inline-block;
+    text-decoration: none;
+    color: #020202; /* Keep button text color as dark */
+    font-weight: bold;
+    background-color: #f381bd; /* Button background color */
+    padding: 10px 35px;
+    font-size: 24px;
+    border: 1px solid #03f699; /* Button border color */
+    box-shadow: inset 0px 1px 0px #ef0b0b;
+    margin-right: 10px;
+}
+
+.box1 {
+    background-color: #90f3e2; /* Lightened aqua color */
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.box1:hover {
+    background-color: #f585c2; /* Hover color */
+    color: black; /* Set hover text color to black */
+}
+
+.box2 {
+    background-color: #6ae1e5; /* Teal color */
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.box2:hover {
+    background-color: red; /* Hover color */
+    color: black; /* Set hover text color to black */
+}
+
+.box3 {
+    background-color: #7fe3a1; /* Lightened coral color */
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.box3:hover {
+    background-color: #f7a151; /* Hover color */
+    color: black; /* Set hover text color to black */
+}
+
+.bl {
+    border-left: 4px solid black;
+}
+
+.bb {
+    border-bottom: 4px solid black;
+}
+
+.br {
+    border-right: 4px solid black;
+}
+
+.bt {
+    border-top: 4px solid black;
+}
