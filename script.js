@@ -27,17 +27,15 @@ let GetPuzzle = document.getElementById('GetPuzzle')
 let SolvePuzzle = document.getElementById('SolvePuzzle')
 
 GetPuzzle.onclick = function () {
-	var xhrRequest = new XMLHttpRequest()
-	xhrRequest.onload = function () {
-		var response = JSON.parse(xhrRequest.response)
-		console.log(response)
-		board = response.board
-		FillBoard(board)
-	}
-	xhrRequest.open('get', 'https://sugoku.onrender.com/board?difficulty=easy')
-	//we can change the difficulty of the puzzle the allowed values of difficulty are easy, medium, hard and random
-	xhrRequest.send()
-}
+    fetch('https://sugoku.onrender.com/board?difficulty=easy')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            board = data.board;
+            FillBoard(board);
+        })
+        .catch(error => console.error('Error:', error));
+};
 
 SolvePuzzle.onclick = () => {
 	sudukoSolver(board, 0, 0, 9);
